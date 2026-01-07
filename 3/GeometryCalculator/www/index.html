@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+          initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Geometry Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка приложения -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-shapes"></i>
+                <h1>Geometry Calculator</h1>
+            </div>
+            <p class="app-subtitle">Расчет параметров геометрических фигур</p>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Выбор категории -->
+            <div class="form-group">
+                <label for="category"><i class="fas fa-layer-group"></i> Категория:</label>
+                <select id="category" class="form-select">
+                    <option value="">Выберите категорию</option>
+                    <option value="2d">2D Фигуры (площадь и периметр)</option>
+                    <option value="3d">3D Фигуры (площадь и объем)</option>
+                </select>
+            </div>
+
+            <!-- Выбор фигуры -->
+            <div class="form-group">
+                <label for="figure"><i class="fas fa-shape"></i> Фигура:</label>
+                <select id="figure" class="form-select" disabled>
+                    <option value="">Сначала выберите категорию</option>
+                </select>
+            </div>
+
+            <!-- Динамическая форма для параметров -->
+            <div id="parameters-container" class="parameters-container">
+                <!-- Поля ввода будут добавляться динамически -->
+            </div>
+
+            <!-- Кнопки действий -->
+            <div class="action-buttons">
+                <button id="calculate-btn" class="btn btn-primary" disabled>
+                    <i class="fas fa-calculator"></i> Рассчитать
+                </button>
+                <button id="about-btn" class="btn btn-secondary">
+                    <i class="fas fa-user"></i> Об авторе
+                </button>
+                <button id="reset-btn" class="btn btn-outline">
+                    <i class="fas fa-redo"></i> Сбросить
+                </button>
+            </div>
+
+            <!-- Результаты -->
+            <div id="results" class="results-container" style="display: none;">
+                <h3><i class="fas fa-chart-bar"></i> Результаты расчета</h3>
+                <div class="results-content">
+                    <div id="results-output"></div>
+                    <div class="calculation-time">
+                        <i class="fas fa-clock"></i>
+                        <span id="calc-time">Время расчета: 0.001 сек</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Информация о фигуре -->
+            <div id="figure-info" class="figure-info"></div>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="app-footer">
+            <p>© 2025 ПГТУ, Радиотехнический факультет, кафедра ИСТ</p>
+        </footer>
+    </div>
+
+    <!-- Модальное окно "Об авторе" -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-user-graduate"></i> Об авторе</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="author-info">
+                    <div class="author-photo">
+                        <img src="img/author.jpg" alt="Фото автора">
+                    </div>
+                    <div class="author-details">
+                        <h3>Алексеев Павел Алексеевич</h3>
+                        <p class="author-group">
+                            <i class="fas fa-users"></i> Группа: ИСТ-33
+                        </p>
+                        <p class="author-faculty">
+                            <i class="fas fa-university"></i> Радиотехнический факультет
+                        </p>
+                        <p class="author-department">
+                            <i class="fas fa-book"></i> Кафедра информационных систем и технологий
+                        </p>
+                        <p class="author-university">
+                            <i class="fas fa-graduation-cap"></i> Поволжский государственный технологический университет
+                        </p>
+                        <div class="author-contacts">
+                            <h4><i class="fas fa-address-book"></i> Контакты:</h4>
+                            <p><i class="fas fa-envelope"></i> Email: student@pstu.ru</p>
+                            <p><i class="fas fa-phone"></i> Телефон: +7 (XXX) XXX-XX-XX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-info">
+                    <h4><i class="fas fa-info-circle"></i> О приложении:</h4>
+                    <p>Версия: 1.0.0</p>
+                    <p>Разработано с использованием Apache Cordova</p>
+                    <p>Технологии: HTML5, CSS3, JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
