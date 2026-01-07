@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AKULA app</string>
+    <string name="logo_text">Калькулятор</string>
+    <string name="hint_1">Введите первое число</string>
+    <string name="hint_2">Введите второе число</string>
+    <string name="button_name">Добавить числа</string>
+</resources>
