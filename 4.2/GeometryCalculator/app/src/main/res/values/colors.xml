@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные цвета -->
+    <color name="colorPrimary">#667eea</color>
+    <color name="colorPrimaryDark">#764ba2</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Градиент для фона -->
+    <color name="background_gradient_start">#667eea</color>
+    <color name="background_gradient_end">#764ba2</color>
+
+    <!-- Дополнительные цвета -->
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#555555</color>
+    <color name="dimension_background">#667eea</color>
+    <color name="error_background_color">#fee</color>
+    <color name="results_background_color">#f5f7fa</color>
+
+    <!-- Добавьте эти цвета для устранения ошибок -->
+    <color name="background">@color/background_gradient_start</color>
+    <color name="accent">@color/colorAccent</color>
+    <color name="primary">@color/colorPrimary</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+</resources>
